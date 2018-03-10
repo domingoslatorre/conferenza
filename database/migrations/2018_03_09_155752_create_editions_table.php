@@ -20,7 +20,8 @@ class CreateEditionsTable extends Migration
             $table->string('summary');
             $table->string('description')->nullable();  
             $table->date('start_date');  
-            $table->date('end_date');      
+            $table->date('end_date');
+            $table->string('slug');      
             $table->string('image');
             $table->timestamps();
             $table->foreign('event_id')->references('id')->on('events');
